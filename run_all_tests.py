@@ -12,14 +12,14 @@ ROOT = Path(__file__).resolve().parent
 
 LABS = [
     {
-        "name": "Lab 1: Requirements Engineering",
+        "name": "Lab 1: Requirements Engineering & UML Use-Case Modelling",
         "dir": ROOT / "Lab 1",
         "cmd": [sys.executable, "-m", "pytest", "test_plate_pilot.py", "-q"],
     },
     {
-        "name": "Lab 2: UML Use-Case Modelling",
+        "name": "Lab 2: Agile Backlog Creation & Sprint Simulation in Jira",
         "dir": ROOT / "Lab 2",
-        "cmd": [sys.executable, "-m", "pytest", "test_use_cases.py", "-q"],
+        "cmd": [sys.executable, "-m", "pytest", "test_agile_simulation.py", "-q"],
     },
     {
         "name": "Lab 3: Architecture & Component Modelling",
@@ -39,21 +39,21 @@ LABS = [
     {
         "name": "Lab 6: Line & Branch Coverage - Shopping Cart",
         "dir": ROOT / "Lab 6",
-        "cmd": [sys.executable, "-m", "pytest", "CodeCoverageTest_23_shopping_cart.py", "BranchCoverageTest_23_shopping_cart.py", "-q"],
+        "cmd": [sys.executable, "-m", "pytest", "test_shopping_cart.py", "-q"],
     },
     {
         "name": "Lab 7: Fuzz Testing - Shopping Cart / Hypothesis",
         "dir": ROOT / "Lab 7",
-        "cmd": [sys.executable, "-m", "pytest", "test_shopping_cart.py", "test_processor.py", "-q"],
+        "cmd": [sys.executable, "-m", "pytest", "test_processor.py", "-q"],
     },
 ]
 
 
 def main():
-    print("=" * 70)
+    print("=" * 75)
     print("       SOFTWARE ENGINEERING LAB SUBMISSIONS MASTER TEST RUNNER")
-    print("       Student SRN: PES1UG24CS387 | GitHub: Roshan2607")
-    print("=" * 70)
+    print("       Student SRN: PES1UG24CS387 | GitHub: Roshan2607/SE_LABS")
+    print("=" * 75)
 
     results = []
     all_passed = True
@@ -66,17 +66,18 @@ def main():
         results.append((lab["name"], status_text, proc.stdout.strip()))
 
         if passed:
-            print(f"  -> [OK] {proc.stdout.strip().splitlines()[-1] if proc.stdout else 'PASSED'}")
+            summary = proc.stdout.strip().splitlines()[-1] if proc.stdout else "PASSED"
+            print(f"  -> [OK] {summary}")
         else:
             all_passed = False
             print(f"  -> [FAIL] {proc.stderr or proc.stdout}")
 
-    print("\n" + "=" * 70)
-    print(f"{'Lab':<48} | {'Status':<15}")
-    print("-" * 70)
+    print("\n" + "=" * 75)
+    print(f"{'Lab':<58} | {'Status':<12}")
+    print("-" * 75)
     for name, status, _ in results:
-        print(f"{name:<48} | {status:<15}")
-    print("=" * 70)
+        print(f"{name:<58} | {status:<12}")
+    print("=" * 75)
 
     if all_passed:
         print("\nALL LABS EXECUTED AND PASSED SUCCESSFULLY! (7 / 7)")

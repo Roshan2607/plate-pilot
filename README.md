@@ -4,12 +4,19 @@
 **Student SRN:** PES1UG24CS387  
 **Course Code:** UE24CS351A — Software Engineering  
 **Department:** Computer Science & Engineering  
+**GitHub Repository:** [Roshan2607/SE_LABS](https://github.com/Roshan2607/SE_LABS)
 
 ---
 
 ## 📋 Repository Overview
 
-This repository consolidates all individual Software Engineering (SE) laboratory submissions (Labs 1 through 7) into a unified, cleanly structured, and fully reproducible codebase. Each lab is self-contained in its dedicated directory, containing all executable source code, automated test suites, design diagrams, analysis reports, and official submission deliverables.
+This repository consolidates all individual Software Engineering (SE) laboratory submissions (Labs 1 through 7) strictly aligned with the official PES University course handouts, problem statements, and evaluation criteria.
+
+Each laboratory resides in its self-contained directory complete with:
+- **Official Student Handout** (PDF / DOCX reference)
+- **Submitted Student Deliverables** (Reports, PDFs, Diagrams, Worksheets)
+- **Executable Source Code & Test Suites** (100% automated pass rate via `pytest`)
+- **Technical Documentation & Reflection Analysis**
 
 ---
 
@@ -17,57 +24,69 @@ This repository consolidates all individual Software Engineering (SE) laboratory
 
 ```text
 SE-Labs/
-├── Lab 1/                   # Requirements Engineering (Plate Pilot)
-│   ├── Level 1_Labs_PES1UG24CS387.pdf
-│   ├── plate_pilot.py       # Domain implementation of FR-001 through FR-005
-│   ├── test_plate_pilot.py  # Pytest validation suite
+├── Lab 1/                   # Requirements Engineering & UML Use-Case Modelling (Plate Pilot)
+│   ├── Lab1_student_handout.pdf      # Official PESU Lab 1 Handout
+│   ├── Level 1_Labs_PES1UG24CS387.pdf# Submitted Requirements Table & Use-Case Document
+│   ├── plate_pilot.py                # Executable domain model for FR-001 through FR-005
+│   ├── test_plate_pilot.py           # Automated test suite (5 passed)
+│   ├── use_case_diagram.png          # UML Use Case Diagram (Actors, Includes, Extends)
+│   ├── use_case_diagram.pdf          # Vector PDF diagram
+│   ├── use_case_diagram.mermaid      # Diagram source definition
 │   └── README.md
-├── Lab 2/                   # UML Use-Case Modelling (Plate Pilot)
-│   ├── use_case_diagram.png # Rendered UML Use Case diagram
-│   ├── use_case_diagram.pdf # Vector PDF deliverable
-│   ├── use_case_diagram.mermaid # Mermaid diagram source
-│   ├── test_use_cases.py    # Pytest suite validating all use case flows
-│   └── README.md
+├── Lab 2/                   # Agile Backlog Creation & Sprint Simulation in Jira (Plate Pilot)
+│   ├── Lab_2_Jira_Student_Handout.pdf # Official PESU Lab 2 Handout
+│   ├── PES1UG24CS387_SE_LAB2_Jira_Backlog_Sprint_Simulation.pdf # Deliverable PDF Report
+│   ├── agile_simulation.py           # Scrum Project, Epics, Stories, Sprints & Burndown tracker
+│   ├── generate_burndown_charts.py   # Publication-quality burndown chart visualizer
+│   ├── generate_lab2_pdf.py          # ReportLab PDF compilation script
+│   ├── test_agile_simulation.py      # Automated test suite (6 passed)
+│   ├── burndown_chart_sprint1.png    # Sprint 1 Burndown Chart (18 SP)
+│   ├── burndown_chart_sprint2.png    # Sprint 2 Burndown Chart (16 SP)
+│   └── README.md                     # Epics, Stories, Boards & 4 Reflection Questions
 ├── Lab 3/                   # Architecture & Component Modelling (Plate Pilot)
-│   ├── PES1UG24CS387_LAB3.pdf
-│   ├── component_diagram.png# UML Component diagram
-│   ├── architecture_components.py # 3-Tier Layered Architecture implementation
-│   ├── test_architecture.py # Validates NFR-001 (<5s latency) & NFR-002 (security)
+│   ├── Lab_3_Architecture_Student_handout.pdf # Official PESU Lab 3 Handout
+│   ├── Lab_3_Reference_Sheet(1).docx          # Official Reference Guide
+│   ├── PES1UG24CS387_LAB3.pdf                 # 1-Page Written Architectural Justification
+│   ├── component_diagram.png                  # UML Component Diagram (5 components, 4 interfaces)
+│   ├── architecture_components.py             # 3-Tier Layered Architecture implementation
+│   ├── test_architecture.py                  # Validates NFR-001 (<5s latency) & NFR-002 (security)
 │   └── README.md
-├── Lab 4/                   # AI-Assisted Debugging / Vibe Coding (Blackjack)
-│   ├── cards.py             # Fixed Ace hand scoring logic (Tasks 1-4)
-│   ├── game.py              # Round flow, wagers, and multi-round bankroll
-│   ├── main.py              # Interactive game loop
+├── Lab 4/                   # AI-Assisted VibeCoding (Scenario 18: Blackjack vs Dealer)
+│   ├── Lab_4_VibeCoding_Student_handout.pdf   # Official PESU Lab 4 Handout
+│   ├── PES1UG24CS387 Lab 4 – Vibe Coding Deliverable Submission.pdf # Video Drive Links
+│   ├── SE_LAB4_Prompts.pdf                    # Complete 31-page AI Prompt Transcript
+│   ├── cards.py                               # Corrected Ace hand evaluation (soft/hard totals)
+│   ├── game.py                                # Round mechanics, wagers, and multi-round bankroll
+│   ├── main.py                                # Interactive game loop
 │   ├── requirements.txt
-│   ├── test_blackjack.py    # Automated test suite (9 test cases)
-│   ├── PES1UG24CS387 Lab 4 – Vibe Coding Deliverable Submission.pdf
-│   ├── SE_LAB4_Prompts.pdf
+│   ├── test_blackjack.py                      # Automated test suite (9 passed)
 │   └── README.md
 ├── Lab 5/                   # Static Code Analysis (Bike Share Stations)
-│   ├── bike_share_stations.py # Refactored code (Pylint 10/10, Bandit 0 issues)
-│   ├── issues.md            # Static analysis defect ledger
-│   ├── reflection.md        # Technical reflection report
+│   ├── Lab_5_Static_Code_Analysis_Student_handout.pdf # Official PESU Lab 5 Handout
+│   ├── bike_share_stations.py                 # Refactored code (Pylint 10/10, Bandit 0 issues)
+│   ├── issues.md                              # Static analysis defect ledger
+│   ├── reflection.md                          # Technical reflection report
 │   ├── reports/
-│   │   ├── before/          # Baseline reports (Bandit, Flake8, Pylint)
-│   │   └── after/           # Remediated clean reports
-│   ├── test_bike_share_stations.py # Functional test suite
-│   ├── Lab_5_Static_Code_Analysis_Student_handout.pdf
+│   │   ├── before/                            # Baseline reports (Bandit, Flake8, Pylint)
+│   │   └── after/                             # Remediated clean reports (0 defects)
+│   ├── test_bike_share_stations.py            # Functional test suite (5 passed)
 │   └── README.md
-├── Lab 6/                   # Code & Branch Coverage (Shopping Cart)
-│   ├── shopping_cart.py     # Application under test
-│   ├── test_shopping_cart.py# Baseline tests
-│   ├── CodeCoverageTest_23_shopping_cart.py   # 100% Statement Coverage
-│   ├── BranchCoverageTest_23_shopping_cart.py # 100% Branch Coverage
-│   ├── PES1UG24CS387_SE_LAB6.pdf
-│   ├── PES1UG24CS387_SE_LAB6.docx
+├── Lab 6/                   # Code & Branch Coverage Analysis (Shopping Cart)
+│   ├── Lab_6_Code&BranchCoverage_Student_Handout.docx (1).pdf # Official PESU Lab 6 Handout
+│   ├── PES1UG24CS387_SE_LAB6.pdf              # Submitted coverage report with screenshots
+│   ├── PES1UG24CS387_SE_LAB6.docx             # Submission report source
+│   ├── shopping_cart.py                       # Application under test
+│   ├── CodeCoverageTest_23_shopping_cart.py   # Statement Coverage suite (100%)
+│   ├── BranchCoverageTest_23_shopping_cart.py # Branch Coverage suite (100% - 22/22 branches)
+│   ├── test_shopping_cart.py                  # Unified test runner
 │   └── README.md
-├── Lab 7/                   # Fuzz Testing for Input Validation (Shopping Cart)
-│   ├── shopping_cart.py     # Hardened against arbitrary fuzz inputs & None
-│   ├── processor.py         # Course handout alias
-│   ├── test_shopping_cart.py# Hypothesis property-based fuzz tests
-│   ├── test_processor.py    # Test runner alias
-│   ├── PES1UG24CS387_LAB7_SE.pdf
-│   ├── Lab_7_FuzzTesting_Student_Handout.pdf
+├── Lab 7/                   # Fuzz Testing for Input Validation Bugs (Shopping Cart)
+│   ├── Lab_7_FuzzTesting_Student_Handout.pdf  # Official PESU Lab 7 Handout
+│   ├── PES1UG24CS387_LAB7_SE.pdf              # Submitted Fuzz Testing report with screenshots
+│   ├── shopping_cart.py                       # Hardened against arbitrary fuzz inputs & None
+│   ├── processor.py                           # Course handout alias
+│   ├── test_shopping_cart.py                  # Hypothesis property-based fuzz tests
+│   ├── test_processor.py                      # Handout test runner alias (6 passed)
 │   └── README.md
 ├── .gitignore
 ├── README.md                # Master documentation
@@ -78,22 +97,23 @@ SE-Labs/
 
 ## 📊 Summary of Labs & Verification Status
 
-| Lab | Title / Topic | Assigned Scenario | Deliverables & Artifacts | Test Status |
-| :--- | :--- | :--- | :--- | :---: |
-| **Lab 1** | Requirements Engineering | Plate Pilot (#19) | Requirements Table, FRs, NFRs, `plate_pilot.py`, `Level 1_Labs_PES1UG24CS387.pdf` | **5 / 5 PASSED** |
-| **Lab 2** | UML Use-Case Modelling | Plate Pilot (#19) | Actors, Use Cases UC-01 to UC-07, `use_case_diagram.png`, `test_use_cases.py` | **6 / 6 PASSED** |
-| **Lab 3** | Architecture & Component Modelling | Plate Pilot (#19) | Layered Pattern Justification, `component_diagram.png`, `test_architecture.py` | **3 / 3 PASSED** |
-| **Lab 4** | AI-Assisted Vibe Coding | Scenario 18: Blackjack | Fixed Ace evaluation, round resolution, bankroll wager validation, `test_blackjack.py` | **9 / 9 PASSED** |
-| **Lab 5** | Static Code Analysis | Bike Share Stations | Pylint (10.00/10), Bandit (0 issues), Flake8 clean, `reports/`, `test_bike_share_stations.py` | **5 / 5 PASSED** |
-| **Lab 6** | Code & Branch Coverage | Shopping Cart | 100% Statement Coverage, 100% Branch Coverage (22/22 branches), `PES1UG24CS387_SE_LAB6.pdf` | **17 / 17 PASSED** |
-| **Lab 7** | Fuzz Testing with Hypothesis | Shopping Cart / Fuzzer | Input validation hardening against arbitrary strings and nulls, `PES1UG24CS387_LAB7_SE.pdf` | **6 / 6 PASSED** |
+| Lab | Curriculum Title | Assigned Scenario | Deliverables & Artifacts | Automated Test Status |
+| :---: | :--- | :--- | :--- | :---: |
+| **Lab 1** | Requirements Engineering & UML Use-Case Modelling | Plate Pilot (#19) | 5 FRs, 2 NFRs, Use-Case Diagram, Flow Document, `plate_pilot.py` | **5 / 5 PASSED** |
+| **Lab 2** | Agile Backlog Creation & Sprint Simulation in Jira | Plate Pilot (#19) | 4 Epics, 10 Stories (Fibonacci SP), 2 Sprints, Burndown Charts, 4 Reflection Answers | **6 / 6 PASSED** |
+| **Lab 3** | Component Modelling & Architecture Selection | Plate Pilot (#19) | 1-Page Justification, 5 Components, 4 Interfaces, `test_architecture.py` | **3 / 3 PASSED** |
+| **Lab 4** | AI-Assisted VibeCoding | Scenario 18: Blackjack | Tasks 1–4, Video Links, 31-page Prompts PDF, `test_blackjack.py` | **9 / 9 PASSED** |
+| **Lab 5** | Static Code Analysis | Bike Share Stations | Pylint (10/10), Bandit (0 issues), Flake8 clean, Before/After reports | **5 / 5 PASSED** |
+| **Lab 6** | Code & Branch Coverage Analysis | Shopping Cart | 100% Statement Coverage, 100% Branch Coverage (22/22 branches), Report PDF | **10 / 10 PASSED** |
+| **Lab 7** | Fuzz Testing for Input Validation Bugs | Shopping Cart / Hypothesis | Hardened parser against arbitrary strings & nulls, 6 Hypothesis tests, Report PDF | **6 / 6 PASSED** |
+| **TOTAL** | **All 7 Laboratories Consolidated** | **UE24CS351A** | **Unified Executable Repository** | **44 / 44 PASSED (100%)** |
 
 ---
 
 ## 🚀 Quick Start & Execution
 
-### 1. Run All Tests Across All Labs (One Command)
-A master test script is provided in the repository root to execute test suites across all 7 laboratories sequentially:
+### 1. Run Master Test Suite Across All Labs
+Run the single root runner script to execute all automated test suites sequentially:
 
 ```bash
 python run_all_tests.py
@@ -101,16 +121,19 @@ python run_all_tests.py
 
 ### 2. Run Individual Labs
 
-#### **Lab 1: Requirements Engineering**
+#### **Lab 1: Requirements Engineering & UML Use-Case Modelling**
 ```bash
 cd "Lab 1"
 pytest test_plate_pilot.py -v
 ```
 
-#### **Lab 2: UML Use-Case Modelling**
+#### **Lab 2: Agile Backlog Creation & Sprint Simulation in Jira**
 ```bash
 cd "Lab 2"
-pytest test_use_cases.py -v
+pytest test_agile_simulation.py -v
+# Re-generate burndown charts & deliverable PDF:
+python generate_burndown_charts.py
+python generate_lab2_pdf.py
 ```
 
 #### **Lab 3: Architecture & Component Modelling**
@@ -122,7 +145,6 @@ pytest test_architecture.py -v
 #### **Lab 4: Scenario 18 — Blackjack**
 ```bash
 cd "Lab 4"
-# Run automated tests:
 pytest test_blackjack.py -v
 # Or play the interactive game:
 python main.py
@@ -131,27 +153,19 @@ python main.py
 #### **Lab 5: Static Code Analysis — Bike Share Stations**
 ```bash
 cd "Lab 5"
+pytest test_bike_share_stations.py -v
 pylint bike_share_stations.py
 bandit -r bike_share_stations.py
-pytest test_bike_share_stations.py -v
 ```
 
-#### **Lab 6: Code & Branch Coverage**
+#### **Lab 6: Code & Branch Coverage Analysis**
 ```bash
 cd "Lab 6"
-# Line / Statement Coverage (100%):
-python -m coverage erase
-python -m coverage run -m pytest CodeCoverageTest_23_shopping_cart.py
-python -m coverage report -m
-
-# Branch Coverage (100%):
-python -m coverage erase
-python -m coverage run --branch -m pytest BranchCoverageTest_23_shopping_cart.py
-python -m coverage report -m
+pytest test_shopping_cart.py --cov=shopping_cart --cov-branch --cov-report=term-missing
 ```
 
 #### **Lab 7: Fuzz Testing (Hypothesis)**
 ```bash
 cd "Lab 7"
-pytest test_shopping_cart.py -v
+pytest test_processor.py -v
 ```
