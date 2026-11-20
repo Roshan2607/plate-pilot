@@ -4,7 +4,7 @@
 **Student SRN:** PES1UG24CS387  
 **Course Code:** UE24CS351A — Software Engineering  
 **Department:** Computer Science & Engineering  
-**GitHub Repository:** [Roshan2607/SE_LABS](https://github.com/Roshan2607/SE_LABS)
+**GitHub Repository:** [Roshan2607/plate-pilot](https://github.com/Roshan2607/plate-pilot)
 
 ---
 

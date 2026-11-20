@@ -52,7 +52,7 @@ LABS = [
 def main():
     print("=" * 75)
     print("       SOFTWARE ENGINEERING LAB SUBMISSIONS MASTER TEST RUNNER")
-    print("       Student SRN: PES1UG24CS387 | GitHub: Roshan2607/SE_LABS")
+    print("       Student SRN: PES1UG24CS387 | GitHub: Roshan2607/plate-pilot")
     print("=" * 75)
 
     results = []
