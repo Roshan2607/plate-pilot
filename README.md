@@ -35,13 +35,12 @@ SE-Labs/
 │   └── README.md
 ├── Lab 2/                   # Agile Backlog Creation & Sprint Simulation in Jira (Plate Pilot)
 │   ├── Lab_2_Jira_Student_Handout.pdf # Official PESU Lab 2 Handout
-│   ├── PES1UG24CS387_SE_LAB2_Jira_Backlog_Sprint_Simulation.pdf # Deliverable PDF Report
-│   ├── agile_simulation.py           # Scrum Project, Epics, Stories, Sprints & Burndown tracker
-│   ├── generate_burndown_charts.py   # Publication-quality burndown chart visualizer
-│   ├── generate_lab2_pdf.py          # ReportLab PDF compilation script
-│   ├── test_agile_simulation.py      # Automated test suite (6 passed)
-│   ├── burndown_chart_sprint1.png    # Sprint 1 Burndown Chart (18 SP)
-│   ├── burndown_chart_sprint2.png    # Sprint 2 Burndown Chart (16 SP)
+│   ├── Lab2_PES1UG24CS387_5G.pdf     # Submitted Jira Deliverable with Screenshots & Reflections
+│   ├── jira_backlog_epics.png        # Screenshot: Jira Backlog & Epics (53 Story Points)
+│   ├── jira_active_sprint_board.png  # Screenshot: Active Sprint Board (To Do / In Progress / Done)
+│   ├── jira_burndown_chart.png       # Screenshot: Sprint Burndown Chart
+│   ├── agile_simulation.py           # Domain model validating PLAT Jira board & Fibonacci points
+│   ├── test_agile_simulation.py      # Automated test suite (5 passed)
 │   └── README.md                     # Epics, Stories, Boards & 4 Reflection Questions
 ├── Lab 3/                   # Architecture & Component Modelling (Plate Pilot)
 │   ├── Lab_3_Architecture_Student_handout.pdf # Official PESU Lab 3 Handout
@@ -100,13 +99,13 @@ SE-Labs/
 | Lab | Curriculum Title | Assigned Scenario | Deliverables & Artifacts | Automated Test Status |
 | :---: | :--- | :--- | :--- | :---: |
 | **Lab 1** | Requirements Engineering & UML Use-Case Modelling | Plate Pilot (#19) | 5 FRs, 2 NFRs, Use-Case Diagram, Flow Document, `plate_pilot.py` | **5 / 5 PASSED** |
-| **Lab 2** | Agile Backlog Creation & Sprint Simulation in Jira | Plate Pilot (#19) | 4 Epics, 10 Stories (Fibonacci SP), 2 Sprints, Burndown Charts, 4 Reflection Answers | **6 / 6 PASSED** |
+| **Lab 2** | Agile Backlog Creation & Sprint Simulation in Jira | Plate Pilot (#19) | 4 Epics, 7 Stories (53 Fibonacci SP), Burndown Chart, 4 Reflection Answers | **5 / 5 PASSED** |
 | **Lab 3** | Component Modelling & Architecture Selection | Plate Pilot (#19) | 1-Page Justification, 5 Components, 4 Interfaces, `test_architecture.py` | **3 / 3 PASSED** |
 | **Lab 4** | AI-Assisted VibeCoding | Scenario 18: Blackjack | Tasks 1–4, Video Links, 31-page Prompts PDF, `test_blackjack.py` | **9 / 9 PASSED** |
 | **Lab 5** | Static Code Analysis | Bike Share Stations | Pylint (10/10), Bandit (0 issues), Flake8 clean, Before/After reports | **5 / 5 PASSED** |
 | **Lab 6** | Code & Branch Coverage Analysis | Shopping Cart | 100% Statement Coverage, 100% Branch Coverage (22/22 branches), Report PDF | **10 / 10 PASSED** |
 | **Lab 7** | Fuzz Testing for Input Validation Bugs | Shopping Cart / Hypothesis | Hardened parser against arbitrary strings & nulls, 6 Hypothesis tests, Report PDF | **6 / 6 PASSED** |
-| **TOTAL** | **All 7 Laboratories Consolidated** | **UE24CS351A** | **Unified Executable Repository** | **44 / 44 PASSED (100%)** |
+| **TOTAL** | **All 7 Laboratories Consolidated** | **UE24CS351A** | **Unified Executable Repository** | **43 / 43 PASSED (100%)** |
 
 ---
 
@@ -131,9 +130,6 @@ pytest test_plate_pilot.py -v
 ```bash
 cd "Lab 2"
 pytest test_agile_simulation.py -v
-# Re-generate burndown charts & deliverable PDF:
-python generate_burndown_charts.py
-python generate_lab2_pdf.py
 ```
 
 #### **Lab 3: Architecture & Component Modelling**
